@@ -2,13 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../src/static/scss/reset.scss'
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
     <App />
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById('root')
 );
 
-reportWebVitals();

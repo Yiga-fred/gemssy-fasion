@@ -7,6 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 import Catalog from './components/Catalog'
+import Products from './components/Products'
 
 import Header from './components/Header';
 import './static/scss/App.scss';
@@ -26,7 +27,7 @@ function App() {
             <p>Favorites</p>
           </Route>
           <Route exact path="/:product">
-            <p>product</p>
+            <Products/>
           </Route>
         </Switch>
     </div>

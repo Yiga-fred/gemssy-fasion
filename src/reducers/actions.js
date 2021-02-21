@@ -23,9 +23,15 @@ export function filterCatalogs(filter){
     payload: filter
   }
 }
-export function setSearchValue(value){
+export function fetchProducts(payload){
   return {
-    type: actions.SET_SEARCH_VALUE,
-    payload: value
+    type: actions.FETCH_PRODUCTS,
+    payload
+  }
+}
+export function favoriteProduct(id){
+  return {
+    type: actions.FAVORITE_PRODUCT,
+    payload: id
   }
 }
