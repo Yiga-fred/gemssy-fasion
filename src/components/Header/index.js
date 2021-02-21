@@ -1,5 +1,8 @@
 // @flow
 import React from 'react';
+import {
+  Link
+} from "react-router-dom";
 import './header.scss'
 
 
@@ -7,10 +10,10 @@ import './header.scss'
   return (
     <header className='c-header'>
       <nav>
-      <h1>Gemssy</h1>
+      <Link to='/'><h1>Gemssy</h1></Link>
         <ul>
-          <li>Shop</li>
-          <li>Favourites</li>
+          <li><Link to='/'>Shop</Link></li>
+          <li><Link to='/favorites'>Favourites</Link></li>
         </ul>
       </nav>
     </header>
