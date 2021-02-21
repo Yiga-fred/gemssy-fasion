@@ -1,0 +1,10 @@
+
+@import '../../static/scss/variables';
+
+.c-card {
+  width: 300px;
+  height: 200px;
+  box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  background: $white;
+}
