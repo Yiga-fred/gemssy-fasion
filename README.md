@@ -8,7 +8,6 @@ A tool for fashion influencers:
 ## Installation
 ***yarn install***
 ***yarn start ***
-### yarn start to run the application
 The Server can be found here
 https://gitlab.com/Gemssy/frontend_challenge
 
