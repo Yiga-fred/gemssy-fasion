@@ -25,9 +25,9 @@ import './catalog.scss'
       <Input value={value} onChange={e => setValue(e.target.value)}/>
       {isLoading && <Loader/>}
       {!isLoading && catalogs.length ? <div className='c-catalog__catalogs'>
-      {hasLoadedCatalogs && catalogs.map(({id,name, category_image}) => {
+      {hasLoadedCatalogs && catalogs.map(({id,name, category_image, category_key}) => {
         
-        return <Link to={`/${name}`} key={id}>
+        return <Link to={`/${category_key}`} key={id}>
         <Card> 
         <div className='description'>
           <p>{name}</p>

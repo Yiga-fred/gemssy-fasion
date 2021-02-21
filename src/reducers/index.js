@@ -6,6 +6,7 @@ export  const initialState = {
   catalogs: [],
   error: '',
   filteredCatalogs: [],
+  products: []
 }
 export default function reduce(state, action) {
 
@@ -17,7 +18,6 @@ export default function reduce(state, action) {
       error: ''
     }
     case actions.FETCH_CATALOGS_SUCCESS:
-      console.log(action.type, state)
     return {
       ...state,
       catalogs: action.payload,
@@ -35,10 +35,15 @@ export default function reduce(state, action) {
       ...state,
       filteredCatalogs: state.catalogs.filter(catalog => catalog.category_key.indexOf(action.payload) !== -1)
     }
-    case actions.FAVORITE_CATALOG:
+    case actions.FETCH_PRODUCTS:
     return {
       ...state,
-      catalogs: state.catalogs.map(catalog => catalog.id !== action.payload ? catalog : {...catalog, liked: !catalog.liked})
+      products: action.payload
+    }
+    case actions.FAVORITE_PRODUCT:
+    return {
+      ...state,
+      products: state.products.map(product => product.id !== action.payload ? product : {...product, liked: !product.liked})
     }
     default:
       return state;
