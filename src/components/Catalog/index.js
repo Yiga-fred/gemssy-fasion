@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import Input from '../Input';
-import Header from '../Header';
 
 import './catalog.scss'
 
@@ -13,7 +12,6 @@ import './catalog.scss'
   }
   return (
     <div className='c-catalog'>
-      <Header header='Shop'/>
       <Input value={value} onChange={handleChange}/>
     </div>
   )
