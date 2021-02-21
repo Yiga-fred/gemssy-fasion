@@ -1,0 +1,10 @@
+.c-catalog {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .c-input {
+    margin: 30px;
+  }
+}

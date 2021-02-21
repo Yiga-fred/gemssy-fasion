@@ -1,14 +1,15 @@
-import axios from "./axios";
-import {useEffect} from 'react'
+import React, {useEffect} from 'react';
+import axios from './axios'
+import Catalog from './components/Catalog'
 import './static/scss/App.scss';
 
 function App() {
   useEffect(() => {
-axios.get('/categories').then(({data}) => console.log({data}))
+    axios.get('/categories').then(({data}) => console.log({data}))
   },[])
   return (
     <div className="App">
-      <p>loaded</p>
+     <Catalog/>
     </div>
   );
 }
